@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ErrorTextStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#FF0000</item> <!-- Red color for error -->
+        <item name="android:textSize">12sp</item> <!-- Text size -->
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="lineHeight">16sp</item><!-- Font style -->
+    </style>
+    <style name="ImageView" parent="">
+        <item name="cornerSize">10%</item>
+    </style>
+</resources>
