@@ -96,12 +96,12 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     email = et_email.getText().toString().trim();
                     name = et_Name.getText().toString().trim();
                     password = et_password.getText().toString().trim();
-                    if (imageFile.isEmpty() && name.isEmpty() && email.isEmpty() && password.isEmpty()) {
+                    if (bitmap==null && name.isEmpty() && email.isEmpty() && password.isEmpty()) {
                         tv_Name.setError("Full Name cannot be empty");
                         tv_email.setError("EMail cannot be empty");
                         tv_password.setError("Password cannot be empty");
                         Toast.makeText(this, "Please Capture the Profile ", Toast.LENGTH_LONG).show();
-                    } else if (imageFile.isEmpty()) {
+                    } else if (bitmap==null) {
                         Toast.makeText(this, "Please Capture the Profile ", Toast.LENGTH_LONG).show();
                     } else if (name.isEmpty()) {
                         tv_Name.setError(null);
