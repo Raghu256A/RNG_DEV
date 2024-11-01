@@ -14,6 +14,7 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.rng_dev_info.BaseActivity;
 import com.rng_dev_info.Common.DBManager;
@@ -84,26 +85,48 @@ public class HomeActivity extends BaseActivity {
         try {
             switch (v.getId()) {
                 case R.id.img_fev:
+                    Toast.makeText(this, "your favorites", Toast.LENGTH_SHORT).show();
+
                     break;
                 case R.id.img_acc:
+                    Toast.makeText(this, "your account", Toast.LENGTH_SHORT).show();
+
                     break;
                 case R.id.ll_btn_Inbox:
+                    Toast.makeText(this, "your inbox is empty ", Toast.LENGTH_SHORT).show();
+
                     break;
                 case R.id.ll_btn_Maps:
+                    Toast.makeText(this, "your maps", Toast.LENGTH_SHORT).show();
+
                     break;
                 case R.id.ll_btn_Chat:
+                    Toast.makeText(this, "your Chat details is empty ", Toast.LENGTH_SHORT).show();
+
                     break;
                 case R.id.ll_btn_Report:
+                    Toast.makeText(this, "your reports", Toast.LENGTH_SHORT).show();
+
                     break;
                 case R.id.ll_btn_Calender:
+                    Toast.makeText(this, "Calender", Toast.LENGTH_SHORT).show();
+
                     break;
                 case R.id.ll_btn_Tips:
+                    Toast.makeText(this, "your tips", Toast.LENGTH_SHORT).show();
+
                     break;
                 case R.id.ll_btn_Settings:
+                    Toast.makeText(this, "your settings", Toast.LENGTH_SHORT).show();
+
                     break;
                 case R.id.ll_btn_Share:
+                    Toast.makeText(this, "to share your Profile", Toast.LENGTH_SHORT).show();
+
                     break;
                 case R.id.ll_btn_More:
+                    Toast.makeText(this, "More Details", Toast.LENGTH_SHORT).show();
+
                     break;
                 default:
                     break;
@@ -121,7 +144,7 @@ public class HomeActivity extends BaseActivity {
             String day="";
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
                 currentTime = LocalTime.now();
-                if(currentTime.getHour()>4&&currentTime.getHour()<12){
+                if(currentTime.getHour()>=0&&currentTime.getHour()<12){
                     day=" Good Morning";
                 }else
                 if(currentTime.getHour()>=12&&currentTime.getHour()<18){

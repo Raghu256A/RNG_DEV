@@ -217,6 +217,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 Toast.makeText(this,"Register Successfully..!",Toast.LENGTH_LONG).show();
                 Intent i = new Intent(this, LoginActivity.class);
                 startActivity(i);
+                finish();
             }else {
                 Toast.makeText(this,"Register Fail..!",Toast.LENGTH_LONG).show();
 

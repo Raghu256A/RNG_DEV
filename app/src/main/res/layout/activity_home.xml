@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="#F8F0E8"
+    android:orientation="vertical"
+    android:gravity="center"
     android:layout_margin="5dp"
     android:layout_height="match_parent"
     tools:context=".Activities.HomeActivity">
@@ -11,10 +13,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,8 +26,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
-                android:layout_marginBottom="16dp"
-                >
+                android:layout_marginBottom="16dp">
 
                 <View
                     android:id="@+id/view2"
@@ -61,7 +59,8 @@
                     android:layout_width="140dp"
                     android:layout_height="185dp"
                     android:scaleType="fitXY"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginBottom="-20dp"
                     android:src="@drawable/profile"
                     app:shapeAppearanceOverlay="@style/ImageView"
@@ -70,28 +69,28 @@
 
                 <TextView
                     android:id="@+id/tv_Name"
-                    android:layout_width="200dp"
+                    android:layout_width="190dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="108dp"
-                    android:layout_marginEnd="5dp"
-                    android:maxLines="2"
-                    android:padding="5dp"
-                    android:paddingStart="5dp"
-                    android:text="Sara \nAnderson"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="45dp"
+                    android:gravity="center|left"
+                    android:maxLines="3"
+                    android:paddingStart="15dp"
+                    android:padding="10dp"
+                    android:paddingEnd="3dp"
+                    android:text="Sara\nAndersons"
                     android:textColor="@color/black"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.285"
-                    app:layout_constraintStart_toEndOf="@id/img_profile"
-                    app:layout_constraintTop_toTopOf="@+id/view2" />
+                    app:layout_constraintStart_toEndOf="@+id/img_profile"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_Day_title" />
 
                 <ImageView
                     android:id="@+id/img_fev"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_marginStart="30dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginBottom="-20dp"
                     android:src="@drawable/fav_ic"
                     app:layout_constraintBottom_toBottomOf="@id/view2"
@@ -100,14 +99,15 @@
 
                 <ImageView
                     android:id="@+id/img_acc"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:src="@drawable/profile_ic"
-                    android:layout_marginStart="30dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="25dp"
                     android:layout_marginBottom="-20dp"
+                    android:src="@drawable/profile_ic"
                     app:layout_constraintBottom_toBottomOf="@id/view2"
-                    app:layout_constraintStart_toEndOf="@+id/img_fev"
-                    />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/img_fev" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -170,20 +170,16 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv_per"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_margin="15dp"
-                android:layout_height="wrap_content">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    android:layout_margin="15dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:orientation="horizontal">
                         <LinearLayout
                             android:id="@+id/ll_btn_Inbox"
@@ -275,6 +271,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:orientation="horizontal">
                         <LinearLayout
                             android:layout_width="0dp"
@@ -364,6 +361,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:orientation="horizontal">
                         <LinearLayout
                             android:id="@+id/ll_btn_Settings"
@@ -452,9 +450,8 @@
                         </LinearLayout>
 
                     </LinearLayout>
-
                 </LinearLayout>
-            </androidx.constraintlayout.widget.ConstraintLayout>
+
         </LinearLayout>
     </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

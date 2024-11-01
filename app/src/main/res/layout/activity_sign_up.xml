@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:gravity="center"
     android:layout_height="match_parent"
     tools:context=".Activities.SignUpActivity">
 
@@ -11,18 +14,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/top_banner"
                 android:layout_width="wrap_content"
-                android:layout_height="210dp"
-                android:layout_marginTop="-10dp"
-                android:src="@drawable/top_banner2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_height="250dp"
+                android:layout_marginTop="-30dp"
+                android:src="@drawable/top_banner2" />
 
             <TextView
                 android:id="@+id/title_tv"
@@ -35,10 +37,7 @@
                 android:text="UiLover"
                 android:textColor="@color/primary"
                 android:textSize="35sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/top_banner" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/sub_title_tv"
@@ -50,10 +49,7 @@
                 android:text="Start Your Activity with us"
                 android:textColor="@color/black"
                 android:textSize="14sp"
-                android:textStyle="normal"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title_tv" />
+                android:textStyle="normal" />
 
             <TextView
                 android:id="@+id/signUp_title_tv"
@@ -65,19 +61,13 @@
                 android:text="Please Sign up"
                 android:textColor="@color/black"
                 android:textSize="19sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/sub_title_tv" />
+                android:textStyle="bold" />
             <LinearLayout
                 android:id="@+id/ll_img"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_margin="15dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/signUp_title_tv"
                 android:orientation="vertical">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
@@ -112,6 +102,14 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_margin="25dp">
+
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tv_Name"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -119,13 +117,9 @@
                 android:layout_height="wrap_content"
                 app:errorEnabled="true"
                 app:errorTextAppearance="@style/ErrorTextStyle"
-                android:layout_margin="25dp"
                 android:layout_marginTop="5dp"
                 android:elevation="5dp"
-                android:hint="Enter Your Full Name"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ll_img">
+                android:hint="Enter Your Full Name">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_Name"
@@ -140,13 +134,9 @@
                 android:layout_height="wrap_content"
                 app:errorEnabled="true"
                 app:errorTextAppearance="@style/ErrorTextStyle"
-                android:layout_margin="25dp"
                 android:layout_marginTop="5dp"
                 android:elevation="5dp"
-                android:hint="Enter Your EMail"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_Name">
+                android:hint="Enter Your EMail">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_email"
@@ -162,13 +152,9 @@
                 android:layout_height="wrap_content"
                 app:errorEnabled="true"
                 app:errorTextAppearance="@style/ErrorTextStyle"
-                android:layout_margin="25dp"
                 android:layout_marginTop="5dp"
                 android:elevation="5dp"
-                android:hint="Enter Your Password"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_email">
+                android:hint="Enter Your Password">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_password"
@@ -186,10 +172,7 @@
                 android:background="@drawable/tab_button_bg"
                 android:text="Sing Up"
                 android:textSize="22sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_password" />
+                android:textStyle="bold" />
             <TextView
                 android:id="@+id/bottom_tv"
                 android:layout_width="wrap_content"
@@ -200,11 +183,8 @@
                 android:padding="5dp"
                 android:text="You have an account?"
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="normal"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bn_signUp" />
+                android:textSize="15sp"
+                android:textStyle="normal" />
             <TextView
                 android:id="@+id/signIn_tv"
                 android:layout_width="wrap_content"
@@ -217,13 +197,9 @@
                 android:text="SignIn"
                 android:textColor="@color/blue"
                 android:textSize="23sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bottom_tv" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
