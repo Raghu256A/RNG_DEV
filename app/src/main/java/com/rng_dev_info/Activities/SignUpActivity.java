@@ -113,10 +113,19 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                         tv_email.setError(null);
                         tv_password.setError("Password cannot be empty");
                     } else {
-                        tv_Name.setError(null);
-                        tv_email.setError(null);
-                        tv_password.setError(null);
-                        saveData();
+                        boolean check=true;
+
+                        if (password.length()<6) {
+                            tv_password.setError("password mim length of 6 ");
+                            check=false;
+                        }
+                        if (check){
+                            tv_Name.setError(null);
+                            tv_email.setError(null);
+                            tv_password.setError(null);
+                            saveData();
+                        }
+
                     }
 
                     break;

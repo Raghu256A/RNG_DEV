@@ -242,10 +242,9 @@ public class DBManager {
     public static Boolean loginVerification(String email, String password) {
         boolean res = false;
         try {
-
             String query = "SELECT count(*) as isPresent FROM " + Constants.TABLE_NAME_USER_MASTER + " WHERE EMail = "
                     + Constants.getQuotedString(email) + " AND Password = "
-                    + Constants.getQuotedString(password);
+                    + Constants.getQuotedString(password).trim();
             res = Integer.parseInt(DBManager.getInstance().getScalar(query)) > 0;
 
 
